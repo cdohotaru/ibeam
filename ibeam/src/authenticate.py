@@ -160,7 +160,7 @@ def authenticate_gateway(driver_path,
         
         # wait for the page to load
         user_name_present = EC.presence_of_element_located((By.ID, var.USER_NAME_EL_ID))
-        WebDriverWait(driver, 15).until(user_name_present)
+        WebDriverWait(driver, 30).until(user_name_present)
         _LOGGER.debug('Gateway auth webpage loaded')
 
         immediate_attempts = 0
